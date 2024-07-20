@@ -34,13 +34,9 @@ dependencies {
 
 
     implementation (libs.lightcompressor)
-    //implementation libs.isoparser.v1941
-    //implementation libs.isoparser
-    //implementation 'com.giraffe:vcompressor:2.0.0'
-    //implementation libs.giraffecompressor
+    implementation  (libs.silicompressor)
     implementation libs.firebase.ui.auth
     implementation libs.glide
-//    implementation libs.silicompressor.v224
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity

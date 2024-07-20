@@ -49,6 +49,7 @@
             style="@style/etTxt2"
             android:id="@+id/etnamech"
             android:inputType="textEmailAddress"
+            android:text="hello@gmail.com"
             android:includeFontPadding="false"
             android:drawableLeft="@drawable/user"
             android:hint="Username"
@@ -72,6 +73,7 @@
             android:inputType="textPassword"
             android:includeFontPadding="false"
             style="@style/etTxt2"
+            android:text="123456"
             android:drawableStart="@drawable/lock"
             android:hint="Password"
             />
