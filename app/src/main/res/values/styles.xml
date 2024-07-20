@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="etTxt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">15dp</item>
+        <item name="android:background">@drawable/outline_rnd</item>
+    </style>
+
+    <style name="etTxt2" parent="etTxt">
+        <item name="android:gravity">bottom</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>
