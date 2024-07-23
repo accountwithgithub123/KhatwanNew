@@ -29,15 +29,12 @@ public class MainActivity extends AppCompatActivity {
         btmNav = findViewById(R.id.btmNav);
         btmNav.setSelectedItemId(R.id.myhome);
         loadFragment(new HomeFragment());
-        btmNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId()==R.id.myhome)
-                    loadFragment(new HomeFragment());
-                else
-                    loadFragment(new UsingSiliCompressor());
-                return true;
-            }
+        btmNav.setOnNavigationItemSelectedListener(item -> {
+            if (item.getItemId()==R.id.myhome)
+                loadFragment(new HomeFragment());
+            else
+                loadFragment(new UsingSiliCompressor());
+            return true;
         });
     }
     private void loadFragment(Fragment fragment) {

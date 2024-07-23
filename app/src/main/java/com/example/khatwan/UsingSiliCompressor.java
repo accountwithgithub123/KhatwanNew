@@ -33,7 +33,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.iceteck.silicompressorr.SiliCompressor;
 //import com.iceteck.silicompressorr.SiliCompressor;
 
 import java.io.File;
@@ -69,9 +68,7 @@ public class UsingSiliCompressor extends Fragment {
                 //String inputFilePath  = "/storage/emulated/0/AzRecorderFree/video.mp4";
                 String outputDirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/CompressedVideos/";
                 File outputDir = new File(outputDirPath);
-                if (!outputDir.exists()) {
-                    outputDir.mkdirs();
-                }
+                if (!outputDir.exists()) outputDir.mkdirs();
                 try {
                     new VideoCompression(requireContext(),inputFilePath,outputDirPath).execute(null,null,null);
                 }
@@ -164,7 +161,8 @@ public class UsingSiliCompressor extends Fragment {
             Log.d("VideoCompression", "Output path: " + outputPath);
             String filePath = null;
             try {
-               filePath = SiliCompressor.with(context).compressVideo(inputPath, outputPath);
+                //TODO Change here...
+//               filePath = SiliCompressor.with(context).compressVideo(inputPath, outputPath);
             } catch (IllegalArgumentException e) {
                 Log.e("VideoCompression", "Invalid argument: " + e.getMessage());
             } catch (Exception e) {
